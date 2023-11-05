@@ -1,0 +1,80 @@
+body {
+  font-family: "VT323", monospace;
+  background-color: #333;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+body h1#title {
+  color: wheat;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+body .btns {
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  max-width: 500px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+body .btns button {
+  padding: 10px 20px;
+  width: 80px;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+body .btns button#reset {
+  background-color: #d62828;
+  color: #ffffff;
+}
+body .btns button#black {
+  background-color: #333;
+  color: #ffffff;
+}
+body .btns button#rgb {
+  background-color: #1f77b4;
+  color: #ffffff;
+}
+body .btns button:hover {
+  opacity: 0.8;
+}
+body .colorAndPrompt,
+body .sliderAndValue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+}
+body .colorAndPrompt p,
+body .sliderAndValue p {
+  margin-top: 5px;
+}
+body input[type=range] {
+  width: 100%;
+}
+body .value {
+  margin-top: 10px;
+}
+body .grid {
+  width: 80vw;
+  max-width: 600px;
+  height: 80vw;
+  max-height: 600px;
+  display: grid;
+}
+body .grid .cell {
+  background-color: #ffffff;
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=style.css.map */
