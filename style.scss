@@ -1,0 +1,103 @@
+$red: #d62828;
+$black: #333;
+$blue: #1f77b4;
+$white: #ffffff;
+$gray: #f2f2f2;
+
+@mixin button-style {
+    padding: 10px 20px;
+    width: 80px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+
+body {
+    font-family: 'VT323', monospace;
+    background-color: $gray;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+
+    h1#title {
+        color: $red;
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+
+    .btns {
+        height: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        width: 80%;
+        max-width: 500px;
+        margin-bottom: 30px;
+        border: 2px solid $red;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: $white;
+
+        button {
+            @include button-style;
+
+            &#reset {
+                background-color: $red;
+                color: $white;
+            }
+
+            &#black {
+                background-color: $black;
+                color: $white;
+            }
+
+            &#rgb {
+                background-color: #1f77b4;
+                color: $white;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .colorAndPrompt,
+    .sliderAndValue {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 10px 0;
+
+        p {
+            margin-top: 5px;
+        }
+    }
+
+    input[type="range"] {
+        width: 100%;
+    }
+
+    .value {
+        margin-top: 10px;
+    }
+
+    .grid {
+        width: 80vw;
+        max-width: 600px;
+        height: 80vw;
+        max-height: 600px;
+        border: 2px solid $red;
+        display: grid;
+
+        .cell {
+            background-color: $white;
+            border: 1px solid black;
+        }
+    }
+}
